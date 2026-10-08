@@ -1,0 +1,613 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+html {
+    background: #f8f3ed;
+}
+
+
+body {
+    background: #f8f3ed;
+
+    color: #211b1c;
+
+    font-family: Arial, sans-serif;
+
+    max-width: 430px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 0 18px 60px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 0 34px;
+}
+
+
+.logo {
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+}
+
+
+.age {
+    border: 1px solid #b9aaa5;
+
+    border-radius: 100px;
+
+    padding: 5px 9px;
+
+    color: #514748;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    margin-bottom: 44px;
+}
+
+
+.eyebrow {
+    margin-bottom: 14px;
+
+    color: #936f70;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.centered {
+    text-align: center;
+}
+
+
+h1 {
+    margin-bottom: 22px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+}
+
+
+h1 em {
+    color: #a45461;
+
+    font-weight: 400;
+}
+
+
+.subtitle {
+    color: #655b5c;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   STORY SECTION
+========================================= */
+
+.section-header {
+    margin-bottom: 18px;
+}
+
+
+h2 {
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   STORY GRID
+========================================= */
+
+.story-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px 14px;
+}
+
+
+/* =========================================
+   STORY CARD
+========================================= */
+
+.story-card {
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.story-card:hover {
+    opacity: 0.92;
+}
+
+
+.story-card:active {
+    transform: scale(0.98);
+}
+
+
+.cover {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    object-fit: cover;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+}
+
+
+.story-card h3 {
+    margin-bottom: 5px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+}
+
+
+.story-card p {
+    color: #837677;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   GENERIC SCREENS
+========================================= */
+
+.screen {
+    display: none;
+}
+
+
+.screen.active {
+    display: block;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+    margin-bottom: 20px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #75696a;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   STORY PREVIEW
+========================================= */
+
+.preview-cover {
+    display: block;
+
+    width: 100%;
+
+    max-height: 520px;
+
+    margin-bottom: 24px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+}
+
+
+.preview-tags {
+    margin-bottom: 12px;
+
+    color: #a45461;
+
+    font-size: 12px;
+
+    letter-spacing: 0.3px;
+}
+
+
+.preview-title {
+    margin-bottom: 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+.preview-hook {
+    margin-bottom: 26px;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+}
+
+
+.preview-description {
+    margin-bottom: 32px;
+
+    color: #554c4d;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+}
+
+
+.preview-description p {
+    margin-bottom: 16px;
+}
+
+
+.preview-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-button {
+    width: 100%;
+
+    border: 0;
+
+    border-radius: 100px;
+
+    padding: 17px 20px;
+
+    background: #ad5664;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.primary-button:hover {
+    background: #974653;
+}
+
+
+.primary-button:active {
+    transform: scale(0.98);
+}
+
+
+.top-read-button {
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.story-divider {
+    width: 100%;
+    height: 1px;
+
+    margin-bottom: 28px;
+
+    background: #e4d9d3;
+}
+
+
+/* =========================================
+   NOTES
+========================================= */
+
+.mature-note,
+.privacy-note {
+    margin-top: 13px;
+
+    color: #938889;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   WAITLIST
+========================================= */
+
+.waitlist-screen {
+    padding-top: 34px;
+}
+
+
+.waitlist-symbol {
+    margin-top: 35px;
+    margin-bottom: 22px;
+
+    color: #ad5664;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+}
+
+
+.waitlist-title {
+    margin-bottom: 18px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+}
+
+
+.waitlist-copy {
+    max-width: 330px;
+
+    margin: 0 auto 34px;
+
+    color: #5f5556;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.55;
+}
+
+
+.waitlist-copy strong {
+    color: #211b1c;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.waitlist-form {
+    width: 100%;
+}
+
+
+.email-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #665c5d;
+
+    font-size: 11px;
+}
+
+
+.email-input {
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    padding: 16px 17px;
+
+    border: 1px solid #d8cbc5;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #fffaf6;
+
+    color: #211b1c;
+
+    font-size: 16px;
+}
+
+
+.email-input:focus {
+    border-color: #ad5664;
+}
+
+
+.email-input::placeholder {
+    color: #aaa0a0;
+}
+
+
+.form-error {
+    min-height: 18px;
+
+    margin-top: 10px;
+
+    color: #a03f4c;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SUCCESS
+========================================= */
+
+.success-screen {
+    padding-top: 85px;
+}
+
+
+.success-symbol {
+    display: flex;
+
+    width: 56px;
+    height: 56px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 26px;
+
+    border: 1px solid #cfa6ac;
+    border-radius: 50%;
+
+    color: #ad5664;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+.success-title {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+.success-copy {
+    max-width: 320px;
+
+    margin: 0 auto 34px;
+
+    color: #5f5556;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.55;
+}
+
+
+.success-copy strong {
+    color: #211b1c;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 700px) {
+
+    body {
+        border-left: 1px solid #eee5df;
+        border-right: 1px solid #eee5df;
+    }
+
+}
